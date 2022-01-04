@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/aluno")
 public class AlunoController {
@@ -22,7 +24,7 @@ public class AlunoController {
     AlunoService alunoService;
 
     @PostMapping("/create")
-    public Aluno create(@RequestBody Aluno aluno) {
+    public Aluno create(@Valid @RequestBody Aluno aluno) {
         alunoService.create(aluno);
         return aluno;
     }

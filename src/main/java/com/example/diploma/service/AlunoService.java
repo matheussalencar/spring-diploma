@@ -13,9 +13,12 @@ public class AlunoService {
 
     List<Aluno> listaAlunos = new ArrayList<Aluno>();
 
+    /*
     public AlunoService(List<Aluno> listaAlunos) {
         this.listaAlunos = listaAlunos;
     }
+ 
+     */
 
     public Aluno create(Aluno aluno) {
         listaAlunos.add(aluno);
@@ -45,7 +48,7 @@ public class AlunoService {
         media = media/aluno.getListaDisciplinas().size();
 
         if (media > 9.0) {
-            return aluno.toString() + "\nMédia" + media + " Parabens pelo desempenho!!";
+            return aluno.toString() + "\nMédia " + media + " Parabens pelo desempenho!!";
         }
 
         return aluno.toString() + "\nMédia" + media/aluno.getListaDisciplinas().size();
